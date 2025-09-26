@@ -24,7 +24,7 @@ return (
   <section className="relative min-h-screen flex items-center justify-center pt-24 section-padding">
     {/* Background Image */}
     <img
-  src="/src/imagens/Amena Background.jpg"
+  src="/imagens/Amena Background.jpg"
       alt="Background"
       className="absolute inset-0 w-full h-full object-cover z-0 opacity-30"
     />

@@ -13,7 +13,7 @@ const Footer: React.FC = () => {
             <div className="flex items-center space-x-3">
               <div className="w-12 h-12 bg-primary-light rounded-full flex items-center justify-center">
               <img
-              src="/src/imagens/Amena.png"
+              src="/imagens/Amena.png"
               alt="Logo AMENA"
               className="w-8 h-8 object-contain"
               />
@@ -153,7 +153,7 @@ const Footer: React.FC = () => {
           <div className="inline-flex items-center space-x-2 opacity-30">
             <div className="w-8 h-8 bg-primary-light/20 rounded-full flex items-center justify-center">
               <img
-              src="/src/imagens/Amena.png"
+              src="/imagens/Amena.png"
               alt="Logo AMENA"
               className="w-8 h-8 object-contain"/>
             </div>

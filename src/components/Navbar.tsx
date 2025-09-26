@@ -33,7 +33,7 @@ const Navbar: React.FC<NavbarProps> = ({ isScrolled }) => {
           <div className="flex items-center space-x-3">
             <div className="w-10 h-10 bg-primary-light rounded-full flex items-center justify-center">
               <img
-              src="/src/imagens/Amena.png"
+              src="/imagens/Amena.png"
               alt="Logo AMENA"
               className="w-8 h-8 object-contain"
               />
