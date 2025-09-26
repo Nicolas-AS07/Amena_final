@@ -1,0 +1,111 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Inter:wght@300;400;500;600&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --color-background: #3A3A3A;
+  --color-primary: #DFA6A0;
+  --color-secondary: #C98E71;
+  --color-accent: #7C2134;
+  --color-white: #FFFFFF;
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+  
+  body {
+    font-family: 'Inter', sans-serif;
+    font-weight: 300;
+    line-height: 1.6;
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Playfair Display', serif;
+    font-weight: 600;
+    line-height: 1.2;
+  }
+}
+
+@layer utilities {
+  .glassmorphism {
+    background: rgba(249, 245, 243, 0.8);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+  }
+  
+  .card-hover {
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+  
+  .card-hover:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 20px 25px -5px rgba(124, 33, 52, 0.1), 0 10px 10px -5px rgba(124, 33, 52, 0.04);
+  }
+  
+  .fade-in {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: all 0.6s ease-out;
+  }
+  
+  .fade-in.visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  
+  .btn-primary {
+    @apply bg-primary text-accent px-8 py-3 rounded-full font-medium transition-all duration-300 hover:bg-secondary hover:shadow-lg;
+  }
+  
+  .btn-secondary {
+   @apply bg-primary text-accent px-8 py-3 rounded-full font-medium transition-all duration-300 hover:bg-secondary hover:shadow-lg;
+  }
+  
+  .section-padding {
+    @apply py-20 px-6 md:px-12 lg:px-24;
+  }
+  
+  .container-max {
+    @apply max-w-7xl mx-auto;
+  }
+}
+
+/* Sakura animation */
+@keyframes sakura-fall {
+  0% {
+    transform: translateY(-10px) rotateZ(0deg);
+  }
+  100% {
+    transform: translateY(100vh) rotateZ(360deg);
+  }
+}
+
+.sakura-petal {
+  position: absolute;
+  width: 30px;
+  height: 20px;
+  background: rgba(223, 166, 160, 0.3);
+  border-radius: 50% 0;
+  animation: sakura-fall linear infinite;
+}
+
+/* Scrollbar styles */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--color-background);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--color-primary);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--color-secondary);
+}
